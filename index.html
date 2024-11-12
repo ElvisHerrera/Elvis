@@ -31,6 +31,7 @@
             align-items: center;
             justify-content: center;
             gap: 2rem;
+            flex-wrap: wrap;
         }
 
         header h1 {
@@ -58,10 +59,12 @@
             gap: 2rem;
             max-width: 1000px;
             margin: 0 auto;
+            flex-wrap: wrap;
         }
 
         .hero img {
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
             height: auto;
             border-radius: 8px;
         }
@@ -191,6 +194,44 @@
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text {
+                max-width: 100%;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+            .project-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            nav a {
+                margin: 0 5px;
+                font-size: 0.8rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
