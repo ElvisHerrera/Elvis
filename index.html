@@ -115,6 +115,7 @@
             height: auto;
             border-radius: 4px;
             margin-bottom: 0.5rem;
+            cursor: pointer;
         }
         
         .cta {
@@ -138,12 +139,41 @@
             padding: 1rem;
             margin-top: 2rem;
         }
+
+        /* Modal styling */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <h1></h1>
+            <h1>Elvis Herrera</h1>
             <nav>
                 <a href="#about">Sobre Mi</a>
                 <a href="#projects">Proyectos</a>
@@ -156,7 +186,7 @@
         <div class="hero-content">
             <img src="img_personal.jpg" alt="Imagen Personal">
             <div class="hero-text">
-                <h1>Elvis Herrera</h1>
+                <h1>Bienvenido a Mi Portafolio</h1>
                 <p>Desarrollador de Software apasionado por la innovacion. Explora mis proyectos y conoce más sobre mi trayectoria y habilidades.</p>
             </div>
         </div>
@@ -171,15 +201,15 @@
         <h2>Proyectos</h2>
         <div class="project-cards">
             <div class="project-card">
-                <img src="Proyecto1.png" alt="Proyecto 1">
+                <img src="Proyecto1.png" alt="Proyecto 1" onclick="openModal(this.src)">
                 <p>Proyecto 1: Descripción breve</p>
             </div>
             <div class="project-card">
-                <img src="Proyecto2.png" alt="Proyecto 2">
+                <img src="Proyecto2.png" alt="Proyecto 2" onclick="openModal(this.src)">
                 <p>Proyecto 2: Descripción breve</p>
             </div>
             <div class="project-card">
-                <img src="Project3.png" alt="Proyecto 3">
+                <img src="Proyecto3.png" alt="Proyecto 3" onclick="openModal(this.src)">
                 <p>Proyecto 3: Descripción breve</p>
             </div>
         </div>
@@ -191,7 +221,24 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Mi Nombre. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Elvis Herrera. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Modal structure -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById("myModal").style.display = "flex";
+            document.getElementById("modalImg").src = src;
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
 </body>
 </html>
