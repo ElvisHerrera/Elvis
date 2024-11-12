@@ -30,7 +30,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 2rem; /* Espacio entre el título y el menú */
+            gap: 2rem;
         }
 
         header h1 {
@@ -44,11 +44,6 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-        }
-        
-        section {
-            padding: 2rem;
-            text-align: center;
         }
         
         .hero {
@@ -87,6 +82,24 @@
             margin: 1rem auto;
             padding: 2rem;
             border-radius: 8px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .about-box {
+            background: #ffffff;
+            color: #000;
+            padding: 1.5rem;
+            border-radius: 10px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
         }
 
         .project-cards {
@@ -117,6 +130,17 @@
             margin-bottom: 0.5rem;
             cursor: pointer;
         }
+
+        .project-card h3 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0.3rem;
+        }
+
+        .project-card p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
         
         .cta {
             background-color: #1E88E5;
@@ -142,7 +166,7 @@
 
         /* Modal styling */
         .modal {
-            display: none; /* Hidden by default */
+            display: none;
             position: fixed;
             z-index: 1;
             left: 0;
@@ -168,25 +192,6 @@
             font-weight: bold;
             cursor: pointer;
         }
-        .section-content {
-    background: #1E88E5;
-    margin: 1rem auto;
-    padding: 2rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-box {
-    background: #ffffff;
-    color: #000;
-    padding: 1.5rem;
-    border-radius: 10px;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
     </style>
 </head>
 <body>
@@ -203,44 +208,45 @@
 
     <section class="hero">
         <div class="hero-content">
-            <img src="img_personal.jpg" alt="Imagen Personal">
+            <img src="fotoPersonal.jpg" alt="Imagen Personal">
             <div class="hero-text">
-                <h1>Bienvenido a Mi Portafolio</h1>
+                <h1>Elvis Herrera</h1>
                 <p>Desarrollador de Software apasionado por la innovacion. Explora mis proyectos y conoce más sobre mi trayectoria y habilidades.</p>
             </div>
         </div>
     </section>
 
     <section id="about" class="section-content">
-    <div class="about-box">
-        <h2>Sobre Mi</h2>
-        <p>Soy un estudiante en la Universidad Tecnologica de Panama en la carrera de Desarrollo y Gestion de Software, con experiencia en diversos lenguajes de programación como C, C++, Java y JavaScript. Me apasiona aprender y mejorar mis habilidades para crear soluciones eficaces y creativas.</p>
-    </div>
-</section>
+        <div class="about-box">
+            <h2>Sobre Mi</h2>
+            <p>Soy un estudiante en la Universidad Tecnologica de Panama en la carrera de Desarrollo y Gestion de Software, con experiencia en diversos lenguajes de programación como C, C++, Java y JavaScript. Me apasiona aprender y mejorar mis habilidades para crear soluciones eficaces y creativas.</p>
+        </div>
+    </section>
 
-    
     <section id="projects" class="section-content">
-        <h2>Proyectos</h2>
+        <h2 class="section-title">Proyectos</h2>
         <div class="project-cards">
             <div class="project-card">
-                <img src="Proyecto1.png" alt="Proyecto 1" onclick="openModal(this.src)">
-                <p>Proyecto 1: Descripción breve</p>
+                <img src="Proyecto4.png" alt="Proyecto 1" onclick="openModal(this.src)">
+                <h3>Proyecto 1</h3>
+                <p>Creacion de un empresa ficticia personal, donde se utilizo Ilustrator, Photoshop, y un landing page en html sobre la empresa.</p>
             </div>
             <div class="project-card">
-                <img src="Proyecto2.png" alt="Proyecto 2" onclick="openModal(this.src)">
-                <p>Proyecto 2: Descripción breve</p>
-            </div>
-            <div class="project-card">
-                <img src="Proyecto3.png" alt="Proyecto 3" onclick="openModal(this.src)">
-                <p>Proyecto 3: Descripción breve</p>
+                <img src="Proyecto3.png" alt="Proyecto 2" onclick="openModal(this.src)">
+                <h3>Proyecto 2</h3>
+                <p>Participe en la creacion de un comercio electronico de ventas de computadoras.</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="cta">
         <h2>Contacto</h2>
-        <p>Si estás interesado en colaborar o tienes alguna consulta, <a href="mailto:miemail@correo.com">envíame un correo</a>.</p>
+        <p>
+            <a href="mailto:elvis.herrera2@utp.ac.pa">Outlook: elvis.herrera2@utp.ac.pa</a><br><br>
+            <a href="https://github.com/ElvisHerrera" target="_blank">GitHub: github.com/ElvisHerrera</a>
+        </p>
     </section>
+    
 
     <footer>
         <p>&copy; 2024 Elvis Herrera. Todos los derechos reservados.</p>
