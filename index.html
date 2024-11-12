@@ -168,12 +168,31 @@
             font-weight: bold;
             cursor: pointer;
         }
+        .section-content {
+    background: #1E88E5;
+    margin: 1rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-box {
+    background: #ffffff;
+    color: #000;
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
     </style>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <h1>Elvis Herrera</h1>
+            <h1></h1>
             <nav>
                 <a href="#about">Sobre Mi</a>
                 <a href="#projects">Proyectos</a>
@@ -193,9 +212,12 @@
     </section>
 
     <section id="about" class="section-content">
+    <div class="about-box">
         <h2>Sobre Mi</h2>
         <p>Soy un estudiante en la Universidad Tecnologica de Panama en la carrera de Desarrollo y Gestion de Software, con experiencia en diversos lenguajes de programación como C, C++, Java y JavaScript. Me apasiona aprender y mejorar mis habilidades para crear soluciones eficaces y creativas.</p>
-    </section>
+    </div>
+</section>
+
     
     <section id="projects" class="section-content">
         <h2>Proyectos</h2>
