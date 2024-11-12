@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elvis Tech - Reparación de Computadoras</title>
+    
+    <!-- Link para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Header */
+        header {
+            background-color: #d32f2f;
+            color: #fff;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            height: 60px;
+            margin-right: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-family: 'Poppins', sans-serif;
+        }
+        nav {
+            margin-left: auto;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        /* Hero Section */
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+        .hero {
+            background: #eaeaea;
+            padding: 5rem 1rem;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .hero img {
+            width: 400px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .hero-text {
+            text-align: left;
+            max-width: 500px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Servicios */
+        .services, .about {
+            background: #f4f4f4;
+            margin: 1rem auto;
+            padding: 2rem;
+        }
+        .service-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+        .service-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Descripción oculta */
+        .service-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 1rem;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .service-card:hover .service-description {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* CTA */
+        .cta {
+            background-color: #d32f2f;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .cta a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Logo.png" alt="Logo de Elvis Tech">
+        <h1>Elvis.Tech</h1>
+        <nav>
+            <a href="#about">Nosotros</a>
+            <a href="#services">Servicios</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="img1.jpg" alt="Imagen 1">
+            <div class="hero-text">
+                <h1>Reparación de Computadoras</h1>
+                <p>¡Devuelvele la vida a tu equipo! En Elvis Tech ofrecemos soluciones rápidas y confiables para todo tipo de problemas informáticos. Ademas contamos con los mejores tecnicos, capacitados para dejar a tu equipo como nuevo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Sobre Nosotros</h2>
+                <p>En Elvis Tech, somos especialistas en la reparación, mantenimiento y optimización de equipos de cómputo. Nuestro objetivo es brindar un servicio rápido, eficiente y confiable que permita a nuestros clientes recuperar la funcionalidad de sus dispositivos y aprovechar al máximo su rendimiento.</p>
+            </div>
+            <img src="img2.jpg" alt="Imagen 2">
+        </div>
+    </section>
+    
+    <section id="services" class="services">
+        <h2>Servicios</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="img3.jpg" alt="Reparación de hardware y software">
+                <p>Reparación de hardware y software</p>
+                <div class="service-description">Solución de problemas físicos y lógicos de tu equipo, asegurando un funcionamiento óptimo.</div>
+            </div>
+            <div class="service-card">
+                <img src="img4.jpg" alt="Mantenimiento preventivo">
+                <p>Mantenimiento preventivo</p>
+                <div class="service-description">Limpieza y revisión periódica de tu equipo para evitar fallos y prolongar su vida útil.</div>
+            </div>
+            <div class="service-card">
+                <img src="img5.jpg" alt="Actualización de equipos">
+                <p>Actualización de equipos</p>
+                <div class="service-description">Mejoras en el hardware y software de tu equipo para maximizar su rendimiento.</div>
+            </div>
+            <div class="service-card">
+                <img src="img6.jpg" alt="Recuperación de datos">
+                <p>Recuperación de datos</p>
+                <div class="service-description">Recuperamos tus archivos importantes desde discos dañados o borrados accidentalmente.</div>
+            </div>
+            <div class="service-card">
+                <img src="img7.png" alt="Optimización de rendimiento">
+                <p>Optimización de rendimiento</p>
+                <div class="service-description">Ajustes y configuraciones para que tu equipo funcione de manera más rápida y eficiente.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta">
+        <h2>¡Contáctanos hoy!</h2>
+        <p>¿Tienes un problema con tu equipo? Estamos aquí para ayudarte. 
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=elvistech507@gmail.com" target="_blank">Envíanos un correo</a> o llama al 6241-8878.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Elvis Tech. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
